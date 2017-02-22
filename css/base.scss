@@ -15,10 +15,55 @@ body {
 
 .title {
   text-align: center;
+  display: inline-block;
+  margin: 0;
 }
 
 .mock {
   display: none;
+}
+
+#mine {
+  margin: 0 auto;    
+}
+
+#mine ul {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: right;
+}
+
+#mine li:first-child {
+  float: left;
+  background-color: #fff; 
+}
+
+#mine li {
+  float: right;
+  margin: 0 auto;
+  display: inline-block;
+  list-style: none;
+  background-color: #009688;
+  @media (min-width: 1200px) {
+    width: 10%;
+  }
+  @media (min-width: 450px) and (max-width: 1199px) {
+  }
+}
+
+#mine a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #e0f2f1;
+  padding: .5em 0;
+  margin: 0;
+  &:hover {
+  }
 }
 
 #recreation {
@@ -64,6 +109,4 @@ body {
     color: #2E117F;
     background-color: #9A73DD;
   }
-}
-@media (min-width: px) {
 }

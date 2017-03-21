@@ -18,19 +18,41 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
-    <nav id="recreation">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Commercial</a></li>
-        <li><a href="#">Residential</a></li>
-        <li><a href="#">Custom Glass</a></li>
-        <li><a href="#">Saunas</a></li>
-        <li><a href="#">Sun Rooms</a></li>
-        <li><a href="#">Resources</a></li>
-        <li><a href="#">Contact</a></li>
+    <div class="movie-list">
+      <ul id="movies">
+	<li><h2>Movie List</h2></li>
+	<li><input type="text" id="movie" /><input type="button" id="add" value="Add" /></li>
+	<li><p>Moonlight</p></li>
       </ul>
-    </nav>
-    <!-- reference to outdo -->
-    <img class="mock" src="images/mock.jpg"/>
-  <body>
+    </div>
+    <footer>
+      <!-- reference to outdo -->
+      <img class="mock" src="images/mock.jpg"/>
+      <nav id="recreation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Commercial</a></li>
+          <li><a href="#">Residential</a></li>
+          <li><a href="#">Custom Glass</a></li>
+          <li><a href="#">Saunas</a></li>
+          <li><a href="#">Sun Rooms</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script type="text/javascript">
+      document.getElementById("add").onclick = function() {
+	var node = document.createElement("Li");
+	
+	var text = document.getElementById("movie").value;
+
+	var textnode= document.createTextNode(text);
+
+	node.appendChild(textnode);
+
+	document.getElementById("movies").appendChild(node);
+      }
+    </script>
+  </body>
 </html>
